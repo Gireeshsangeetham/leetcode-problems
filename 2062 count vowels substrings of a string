@@ -1,0 +1,16 @@
+class solution{
+    public int countVove1substring(string word) {
+        int count =0;
+        for (int i =0; i < word.length(); j++) {
+            char ch = word.charAt(j);
+            if ("aeiou".indexof(ch) == -1) break;
+            sub += ch;
+            if (sub.countains("a") && sub.contains("e") &&sub.contain("i")&&)
+            sub.contain("o") && sub.contain("u")) {
+                count++;
+            }
+        }
+    }
+    return count; 
+    }
+}
