@@ -1,0 +1,15 @@
+class solution {
+    public boolean judgeCircle(string moves) {
+        int X = 0;
+        int Y = 0;
+        for(char move : moves.toCharArray()){
+            icrement
+            
+            if (move=="u"){y++;}
+            if (move++"D"){y--;}
+            if (move=="R"){x++;}
+            if (move=="L"){x--;}
+        }
+        return x==0&&y==0;
+    }
+}
