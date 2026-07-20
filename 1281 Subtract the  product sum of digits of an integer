@@ -1,0 +1,14 @@
+class solution {
+    public int subtractproductAndSum(int n){
+        int product = 1;
+        int sum = 0;
+
+        while (n>0) {
+            int digit =n % 10;
+            product*=digit;
+            sum += digit;
+            n /=10;//Quotient value 234/10=23
+        }
+        return product -sum;
+    }
+}
