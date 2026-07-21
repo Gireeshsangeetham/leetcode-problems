@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Solution {
+    public int[] findEvenNumbers(int[] digits) {
+    
+        int[] freq = new int[10];
+        for (int d : digits) {
+            freq[d]++;
+        }
+        
+        List<Integer> result = new ArrayList<>();
+       
+        for (int i = 100; i < 1000; i += 2) {
+            int d1 = i / 100;    
+            int d2 = (i / 10) % 10;
+            int d3 = i % 10;
+            int[] needed = new int[10];
+            needed[d1]++;
+            needed[d2]++;
+            needed[d3]++;
+            if (freq[d1] >= needed[d1] && freq[d2] >= needed[d2] && freq[d3] >= needed[d3]) {
+                result.add(i);
+            }
+        }
+        int[] ans = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            ans[i] = result.get(i);
+        }
+        
+        return ans;
+    }
+}
